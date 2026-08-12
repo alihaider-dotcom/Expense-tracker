@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Personal Expense Tracker</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Expense Tracker</h1>
+      <p class="sub">Minimal, white & grey UI — add, edit, delete expenses and view category summaries.</p>
+    </header>
+
+    <section class="card form-card">
+      <form id="expense-form">
+        <input type="hidden" id="expense-id">
+        <div class="row">
+          <label>Date</label>
+          <input type="date" id="date" required>
+        </div>
+        <div class="row">
+          <label>Amount</label>
+          <input type="number" id="amount" step="0.01" required placeholder="0.00">
+        </div>
+        <div class="row">
+          <label>Category</label>
+          <input type="text" id="category" required placeholder="e.g., Groceries">
+        </div>
+        <div class="row">
+          <label>Description</label>
+          <input type="text" id="description" placeholder="Optional">
+        </div>
+        <div class="actions">
+          <button type="submit" id="save-btn">Add Expense</button>
+          <button type="button" id="cancel-edit" class="muted">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card list-card">
+      <h2>Expenses</h2>
+      <table id="expenses-table">
+        <thead>
+          <tr><th>Date</th><th>Category</th><th>Description</th><th class="amount">Amount</th><th>Actions</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section class="charts">
+      <div class="card chart-card">
+        <h3>By Category</h3>
+        <canvas id="pieChart"></canvas>
+      </div>
+      <div class="card chart-card">
+        <h3>Monthly Totals</h3>
+        <canvas id="barChart"></canvas>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>Built with HTML, CSS, JS and Python (Pandas)</small>
+    </footer>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

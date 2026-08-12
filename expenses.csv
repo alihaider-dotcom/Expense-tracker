@@ -1,0 +1,4 @@
+id,date,amount,category,description
+f1a3b2d0-0000-4000-8000-000000000001,2026-08-01,45.50,Groceries,Weekly groceries
+f1a3b2d0-0000-4000-8000-000000000002,2026-08-03,12.00,Transport,Cab to office
+f1a3b2d0-0000-4000-8000-000000000003,2026-08-05,120.00,Utilities,Electricity bill
